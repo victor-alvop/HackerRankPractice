@@ -1,12 +1,15 @@
 x = int(input('Enter x '))
 y = int(input('Enter y '))
 z = int(input('Enter z '))
+n = int(input('Enter n '))
 
-total_permutations = x*y*z
-permutations_list = []
-[permutations_list.append([i]) for i in range(total_permutations)]
+total_permutations = (x+1)*(y+1)*(z+1)
+#print(f'Combinaciones: {total_permutations}')
 
-#matrix = [[[i for i in range(y)] for _ in range(x)] for _ in range(z)]
-#matriz_3d = [[[0 for _ in range(columnas)] for _ in range(filas)] for _ in range(profundidad)]
+result = [ [i, j, k]
+        for i in range(x + 1)
+        for j in range(y + 1)
+        for k in range(z + 1)
+        if i + j + k != n ]
 
-print(permutations_list)
+print(result)
