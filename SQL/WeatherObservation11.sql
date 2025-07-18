@@ -5,4 +5,4 @@ or do not end with vowels. Your result cannot contain duplicates.
 
 SELECT DISTINCT(city)
 FROM station
-WHERE city REGEXP '[^aeiouAEIOU]$' OR CITY REGEXP '^[^aeiouAEIOU]'
+WHERE city REGEXP '[^aeiouAEIOU]$' OR CITY REGEXP '^[^aeiouAEIOU]';
